@@ -1,5 +1,5 @@
 
-import { GET_USER } from '../constants/ActionTypes'
+import { GET_USER, GET_USER_ASYNC } from '../constants/ActionTypes'
 
 
 const initialState = {
@@ -15,7 +15,7 @@ const get_user = (state, data) => {
 export default function user (state = initialState, action) {
   const {type, data} = action
   switch (type) {
-    case 'GET_USER':
+    case GET_USER:
       return get_user(state, data)
     default:
       return state

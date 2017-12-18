@@ -2,7 +2,7 @@
  * @Author: Leon Zhang 
  * @Date: 2017-11-21 13:07:21 
  * @Last Modified by: Leon Zhang
- * @Last Modified time: 2017-12-15 10:36:39
+ * @Last Modified time: 2017-12-15 18:43:38
  */
 
 const Axios = require('axios')
@@ -50,12 +50,13 @@ axiosModel.interceptors.request.use(function (config) {
 
 axiosModel.interceptors.response.use(function (response) {
   let data = response.data
-  let head = data.head
-  if (head && head.errcode === 0) {
-    return Promise.resolve(data.result || {})
-  } else {
-    return Promise.reject(data.result || {})
-  }
+  // let head = data.head
+  // if (head && head.errcode === 0) {
+  //   return Promise.resolve(data.result || {})
+  // } else {
+  //   return Promise.reject(data.result || {})
+  // }
+  return Promise.resolve(data || {})
 })
 
 ajaxMethod.forEach(method => {

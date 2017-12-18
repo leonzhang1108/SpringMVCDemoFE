@@ -31,6 +31,7 @@ module.exports = {
             'views': resolve('src/views'),
             'util': resolve('src/util'),
             'config': resolve('src/config'),
+            'api': resolve('src/api'),
             '$redux': resolve('src/redux')
         }
     },

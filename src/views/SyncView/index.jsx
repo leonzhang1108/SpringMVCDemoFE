@@ -13,20 +13,6 @@ const mapDispatchToProps = dispatch => ({
   get_user: bindActionCreators(get_user, dispatch)
 })
 
-// const SyncView = ({ userList, get_user }) => {
-//   get_user()
-//   return (
-//     <div>
-//       <p>
-//         I'm Sync View.
-//       </p>
-//       {
-//         userList.map((item, index) => <div key={index}>{item.name}</div>)
-//       }
-//     </div>
-//   )
-// }
-
 class SyncView extends React.Component {
   constructor(props){
     super(props)

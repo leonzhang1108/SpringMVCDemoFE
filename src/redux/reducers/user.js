@@ -6,18 +6,17 @@ const initialState = {
   userList: []
 }
 
-const get_user = (state) => {
+const get_user = (state, data) => {
   return Object.assign({}, state, { 
-    userList: [{
-      name: 'leon'
-    }] 
+    userList: data
   })
 }
 
 export default function user (state = initialState, action) {
-  switch (action.type) {
+  const {type, data} = action
+  switch (type) {
     case 'GET_USER':
-      return get_user(state)
+      return get_user(state, data)
     default:
       return state
   }

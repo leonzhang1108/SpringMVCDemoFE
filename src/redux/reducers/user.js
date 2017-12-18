@@ -16,7 +16,7 @@ const get_user = (state) => {
 
 export default function user (state = initialState, action) {
   switch (action.type) {
-    case GET_USER:
+    case 'GET_USER':
       return get_user(state)
     default:
       return state

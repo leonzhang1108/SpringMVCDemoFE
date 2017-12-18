@@ -1,4 +1,4 @@
-import { takeEvery, put, call } from 'redux-saga/effects'
+import { takeEvery, put, call, all } from 'redux-saga/effects'
 import Api from 'api'
 
 // 一个工具函数：返回一个 Promise，这个 Promise 将在 1 秒后 resolve
@@ -16,7 +16,7 @@ function* watchGetUserAsync() {
 }
 
 export default function* rootSaga() {
-  yield [
+  yield all([
     watchGetUserAsync()
-  ]
+  ])
 }

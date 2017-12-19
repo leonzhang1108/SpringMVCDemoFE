@@ -16,7 +16,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "antd": "^3.0.2",
     "axios": "^0.17.1",
+    "babel-plugin-import": "^1.6.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

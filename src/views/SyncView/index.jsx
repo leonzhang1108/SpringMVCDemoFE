@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { get_user } from '$redux/actions'
+import { DatePicker } from 'antd'
 import './SyncView.css'
 
 const mapStateToProps = state => ({
@@ -23,6 +24,7 @@ class SyncView extends React.Component {
   render() {
     return (
       <div>
+        <DatePicker/>
         <p>
           I'm Sync View
         </p>

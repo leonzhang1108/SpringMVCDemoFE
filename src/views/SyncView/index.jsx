@@ -19,12 +19,13 @@ class SyncView extends React.Component {
     super(props)
   }
   componentDidMount = () => {
+    // 获取用户
     this.props.get_user()
   }
   render() {
     return (
       <div>
-        <DatePicker/>
+        <DatePicker />
         <p>
           I'm Sync View
         </p>
